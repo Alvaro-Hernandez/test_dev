@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Pais } from 'src/app/models/paisModel';
+import { PaisService } from 'src/app/services/pais.service';
 @Component({
   selector: 'app-paises-c',
   templateUrl: './paises-c.component.html',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaisesCComponent implements OnInit {
 
-  constructor() { }
+  pais!:Pais;
+
+
+  constructor(private paisService: PaisService) { }
 
   ngOnInit(): void {
+  }
+
+  getPais(paisId: string){
+    this.paisService.getPais(paisId).subscribe((data : Pais)=>{
+      this.pais = data;
+    })
   }
 
 }

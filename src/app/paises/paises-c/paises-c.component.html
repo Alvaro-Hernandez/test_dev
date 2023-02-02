@@ -1,1 +1,12 @@
-<p>paises-c works!</p>
+<p>Country Model</p>
+<input type="text" #textId>
+<button (click)="getPais(textId.value)">Buscar</button>
+
+<section *ngIf="pais">
+  <div>
+    <h1>Nombre: {{pais.nombre}}</h1>
+    <h1> Capital: {{pais.capital}}</h1>
+    <h1> CodigoPais: {{pais.codigoPais}}</h1>
+    <h1> Simbolo {{pais.simboloMoneda}}</h1>
+  </div>
+</section>
