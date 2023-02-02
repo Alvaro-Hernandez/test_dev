@@ -1,0 +1,26 @@
+.mat-toolbar.mat-primary
+{
+  background-color: rgb(0, 155, 202);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_Button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_Button button{
+  margin-right: 16px;
+  width: 100px;
+  height: 30px;
+  background-color: blueviolet;
+  border: none;
+  color: white;
+}

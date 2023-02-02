@@ -1,0 +1,9 @@
+<p>Comunicacion de Cambio de Titulo</p>
+<form (ngSubmit)="changeNamed()">
+  <div>
+    <label for="title"></label>
+    <input type="text" name="title" [(ngModel)]="change.name">
+  </div>
+  <button type="submit">Change Title</button>
+</form>
+
